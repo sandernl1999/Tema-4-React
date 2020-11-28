@@ -46,7 +46,7 @@ function TodoForm(props) {
            <>
           <input
           type='text'
-          placeholder='Legg til film...'
+          placeholder='Legg til film....'
           value={input}
           name='text'
           className='todo-input'
