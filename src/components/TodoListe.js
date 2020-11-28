@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
-import TodoForm from './TodoForm'
+import TodoSkjema from './TodoSkjema'
 import Todo from './Todo';
 
 
-function TodoList() {
+function TodoListe() {
     const [todos, setTodos] = useState([])
 
     const addTodo = todo => {
@@ -47,7 +47,7 @@ function TodoList() {
         <div>
         <p> <span role="img" aria-label="movie-emojis">🎬 🎞️</span></p>
          <h1>Karantenelista</h1>   
-         <TodoForm onSubmit={addTodo} />
+         <TodoSkjema onSubmit={addTodo} />
          <Todo 
          todos={todos}
          completeTodo={completeTodo}
@@ -58,4 +58,4 @@ function TodoList() {
     );
 }
 
-export default TodoList;
+export default TodoListe;

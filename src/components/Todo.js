@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import TodoForm from './TodoForm'
+import TodoSkjema from './TodoSkjema'
 import {RiCloseCircleLine} from 'react-icons/ri'
 import {TiEdit} from 'react-icons/ti'
 
@@ -20,7 +20,7 @@ function Todo({todos, completeTodo, removeTodo, updateTodo }) {
     }
 
     if(edit.id) {
-        return <TodoForm edit={edit} onSubmit={submitUpdate} />;
+        return <TodoSkjema edit={edit} onSubmit={submitUpdate} />;
     }
 
 
