@@ -1,3 +1,4 @@
+/*Stjerne = felles-css*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,12 +7,13 @@
     'Lucida Sans', Arial, sans-serif;
 }
 
+/*Bakgrunns-animasjonen*/
 body {
-  background: linear-gradient(-45deg, #6ff346, #f15e09, #31b7e7, #38e755, #d97cf0, #eb6b6b, #f3da4e, #79b9f5);
+  background: linear-gradient(-45deg, #6ff346, #31b7e7, #aa6be6, #79b9f5, #eb6b6b, #e6d15f, #79b9f5);
   background-size: 400% 400%;
   width: 100%;
   height: auto;
-  animation: gradient 5s ease infinite;
+  animation: gradient 12s ease infinite;
 }
 
 @keyframes gradient {
@@ -24,10 +26,10 @@ body {
 	100% {
 		background-position: 0% 50%;
   }
-
+  
 }
 
-
+/*Selve ToDo-appen, størrelse og plassering på nettleseren*/
 .todo-app {
   display: flex;
   position: relative;
@@ -35,7 +37,7 @@ body {
   justify-content: start;
   width: 440px;
   min-height: 600px;
-  background: #2a3d8f;
+  background: #415ac7;
   text-align: center;
   left: auto;
   right: auto;
@@ -43,9 +45,9 @@ body {
   bottom: auto;
   margin: 5rem auto;
   border-radius: 10px;
-  
+  border: 1px solid white;
 }
-
+/*Tittelen, "karanteneLista*/
 h1 {
   margin: 25px 0;
   color: #fff;
@@ -58,21 +60,25 @@ p{
   margin-bottom: -1.5rem;
   margin-top: 0.5rem;
 }
-
-
+/**/
 .complete {
   text-decoration: line-through;
   opacity: 0.4;
 }
 
+/*Oppdatere å lage*/
 .todo-form {
   margin-bottom: 32px;
 }
 
+/*"Legg til film..." tekst-redigering*/
 .todo-input::placeholder{
   font-size: 16px;
+  color: white;
+  font-weight: 500;
 }
 
+/*"Legg til film..." selve boksen*/
 .todo-input {
   padding: 14px 32px 14px 16px;
   border-radius: 4px 0 0 4px;
@@ -83,10 +89,7 @@ p{
   color: #fff;
 }
 
-.todo-input::placeholder {
-  color: #e2e2e2;
-}
-
+/*Lagre knappen*/
 .todo-button {
   padding: 16px;
   border: none;
@@ -96,12 +99,13 @@ p{
   background: linear-gradient(
     90deg,
     rgb(53, 163, 26) 0%,
-    rgb(53, 163, 26) 100%
+    rgb(123, 211, 101) 100%
   );
   color: #fff;
   text-transform: capitalize;
 }
 
+/*Oppdaterings-knappen, når man skal endre film-navn*/
 .todo-input.edit {
   border: 2px solid #149fff;
 }
@@ -115,12 +119,15 @@ p{
   padding: 16px 22px;
 }
 
+/**/
 .todo-container {
   display: flex;
   flex-direction: row;
   position: relative;
 }
 
+/*Fargevalg av de ulike kollonnene som popper opp 
+når man taster inn nye film-titler*/
 .todo-row {
   display: flex;
   justify-content: space-between;
@@ -141,8 +148,8 @@ p{
 .todo-row:nth-child(7n + 1) {
   background: linear-gradient(
     90deg,
-    rgba(93, 12, 255, 1) 0%,
-    rgba(155, 0, 250, 1) 100%
+    rgba(54, 185, 42) 0%,
+    rgba(23, 179, 70) 100%
   );
 }
 
@@ -164,8 +171,8 @@ p{
 .todo-row:nth-child(7n + 4) {
   background: linear-gradient(
     90deg,
-    rgb(54, 185, 42) 0%,
-    rgb(23, 179, 70) 100%
+    rgb(155, 0, 250, 1) 0%,
+    rgb(155, 0, 250, 1) 100%
   );
 }
 .todo-row:nth-child(7n + 5) {
@@ -184,6 +191,7 @@ p{
   );
 }
 
+/*Ikonene for skrive ny tittel og for å fjerne film*/
 .icons {
   display: flex;
   align-items: center;
