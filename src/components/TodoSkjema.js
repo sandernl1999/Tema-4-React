@@ -17,6 +17,7 @@ function TodoForm(props) {
     const handleSubmit = e => {
         e.preventDefault();
 
+        /*Setter tallet til 10 000 slik at sjangsen for å få samme ID blir liten*/ 
         props.onSubmit({
          id: Math.floor(Math.random() * 10000),
          text: input
@@ -26,7 +27,7 @@ function TodoForm(props) {
 
     };
 
-
+/*Innmat utad, buttons og placeholders som viser hvordan appen skal brukes */ 
     return (
         <form className='todo-form' onSubmit={handleSubmit}>
            {props.edit ? (
@@ -58,8 +59,8 @@ function TodoForm(props) {
         )}
         </form>
          );
-             }
 
+             }
 
 
 export default TodoForm;

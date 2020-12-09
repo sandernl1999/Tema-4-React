@@ -1,3 +1,4 @@
+/*Importer og samhandling mellom de ulike komponentene*/
 import React, {useState} from 'react'
 import TodoSkjema from './TodoSkjema'
 import Todo from './Todo';
@@ -6,6 +7,7 @@ import Todo from './Todo';
 function TodoListe() {
     const [todos, setTodos] = useState([])
 
+    /*Legge til en/ny Todo/filmtittel*/
     const addTodo = todo => {
         if (!todo.text || /^\s*$/.test(todo.text)) {
             return;
@@ -17,8 +19,9 @@ function TodoListe() {
         console.log(...todos);
     };
 
+    /*Oppdatere en Todo/filmtittel*/
     const updateTodo =(todoId, newValue) => {
-        if (!newValue.text || /^\s*$/.test(newValue.text)) {
+        if (!newValue.text || /^\s*$/.test(newValue.text))  {
             return; 
     }
 
@@ -26,13 +29,14 @@ function TodoListe() {
     );
    };
 
+    /*Fjerne en Todo/filmtittel*/
      const removeTodo = id => {
          const removeArr = [...todos].filter(todo => todo.id !== id);
 
          setTodos(removeArr);
      };
 
-
+   /*Fullføre en Todo/filmtittel, (trykke på tittelen)*/
     const completeTodo = id => {
         let updatedTodos = todos.map(todo => {
             if (todo.id === id) {
@@ -43,6 +47,8 @@ function TodoListe() {
         setTodos(updatedTodos);
     };
 
+    /*Applikasjonen. Overskrift og de ulike funksjonene: Legge til,
+     fullføre, fjerne og oppdatere*/
     return (
         <div>
         <p> <span role="img" aria-label="movie-emojis">🎬 🎞️</span></p>

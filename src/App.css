@@ -35,63 +35,58 @@ body {
   position: relative;
   flex-direction: column;
   justify-content: start;
-  width: 440px;
-  min-height: 600px;
+  width: 27.5em;
+  min-height: 37.5em;
   background: #415ac7;
   text-align: center;
   left: auto;
   right: auto;
   top: auto;
   bottom: auto;
-  margin: 5rem auto;
+  margin: 5em auto;
   border-radius: 10px;
   border: 1px solid white;
 }
 /*Tittelen, "karanteneLista*/
 h1 {
-  margin: 25px 0;
+  margin: 0.9em 0;
   color: #fff;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 /* Film-emojiene på appen*/
 p{
   font-size: 2rem;
-  margin-bottom: -1.5rem;
-  margin-top: 0.5rem;
-}
-/**/
-.complete {
-  text-decoration: line-through;
-  opacity: 0.4;
+  margin-bottom: -0.7em;
+  margin-top: 0.3em;
 }
 
-/*Oppdatere å lage*/
+/*Oppdatere Todo*/
 .todo-form {
-  margin-bottom: 32px;
+  margin-bottom: 2em;
 }
 
 /*"Legg til film..." tekst-redigering*/
 .todo-input::placeholder{
-  font-size: 16px;
+  font-size: 1rem;
   color: white;
   font-weight: 500;
 }
 
 /*"Legg til film..." selve boksen*/
 .todo-input {
-  padding: 14px 32px 14px 16px;
+  padding: 0.875em 2em 0.875em 1em;
   border-radius: 4px 0 0 4px;
   border: 2px solid rgb(53, 163, 26);
   outline: none;
-  width: 320px;
+  width: 20em;
   background: transparent;
   color: #fff;
 }
 
 /*Lagre knappen*/
 .todo-button {
-  padding: 16px;
+  padding: 1.03em;
   border: none;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
@@ -116,15 +111,9 @@ p{
     rgba(20, 159, 255, 1) 0%,
     rgba(17, 122, 255, 1) 100%
   );
-  padding: 16px 22px;
+  padding: 1em 1.375em;
 }
 
-/**/
-.todo-container {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-}
 
 /*Fargevalg av de ulike kollonnene som popper opp 
 når man taster inn nye film-titler*/
@@ -139,21 +128,20 @@ når man taster inn nye film-titler*/
     rgba(255, 118, 20, 1) 0%,
     rgba(255, 84, 17, 1) 100%
   );
-
-  padding: 16px;
+  padding: 1em;
   border-radius: 5px;
   width: 90%;
 }
 
-.todo-row:nth-child(7n + 1) {
+.todo-row:nth-child(6n + 1) {
   background: linear-gradient(
     90deg,
-    rgba(54, 185, 42) 0%,
-    rgba(23, 179, 70) 100%
+    rgb(221, 208, 18) 0%,
+    rgb(212, 209, 20) 100%
   );
 }
 
-.todo-row:nth-child(7n + 2) {
+.todo-row:nth-child(6n + 2) {
   background: linear-gradient(
     90deg,
     rgba(255, 12, 241, 1) 0%,
@@ -161,29 +149,22 @@ når man taster inn nye film-titler*/
   );
 }
 
-.todo-row:nth-child(7n + 3) {
+.todo-row:nth-child(6n + 3) {
   background: linear-gradient(
     90deg,
     rgba(20, 159, 255, 1) 0%,
     rgba(17, 122, 255, 1) 100%
   );
 }
-.todo-row:nth-child(7n + 4) {
+.todo-row:nth-child(6n + 4) {
   background: linear-gradient(
     90deg,
-    rgb(155, 0, 250, 1) 0%,
-    rgb(155, 0, 250, 1) 100%
-  );
-}
-.todo-row:nth-child(7n + 5) {
-  background: linear-gradient(
-    90deg,
-    rgb(219, 216, 7) 0%,
-    rgb(212, 209, 20) 100%
+    rgba(54, 185, 42) 0%,
+    rgb(23, 179, 70) 100%
   );
 }
 
-.todo-row:nth-child(7n + 6) {
+.todo-row:nth-child(6n + 5) {
   background: linear-gradient(
     90deg,
     rgb(214, 54, 54) 0%,
@@ -195,7 +176,7 @@ når man taster inn nye film-titler*/
 .icons {
   display: flex;
   align-items: center;
-  font-size: 24px;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
@@ -206,4 +187,44 @@ når man taster inn nye film-titler*/
 
 .edit-icon {
   color: #fff;
+}
+
+/*Media queries*/
+@media only screen and (max-width:30em){
+  .todo-app{
+    width: 25em;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width:26em){
+  .todo-app{
+    width: 21em;
+    height: auto;
+  }
+}
+@media only screen and (max-width:22em){
+  .todo-app{
+    width: 16em;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width:26em){
+  .todo-input{
+    width: 12em;
+  }
+}
+
+/**/
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+/**/
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
 }
