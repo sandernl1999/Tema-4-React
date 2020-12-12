@@ -27,7 +27,7 @@ function TodoForm(props) {
 
     };
 
-/*Innmat utad, buttons og placeholders som viser hvordan appen skal brukes */ 
+/*Innmat som vises utad. Buttons og placeholders som viser hvordan appen skal brukes */ 
     return (
         <form className='todo-form' onSubmit={handleSubmit}>
            {props.edit ? (

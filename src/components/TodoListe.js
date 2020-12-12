@@ -9,7 +9,7 @@ function TodoListe() {
 
     /*Legge til en/ny Todo/filmtittel*/
     const addTodo = todo => {
-        if (!todo.text || /^\s*$/.test(todo.text)) {
+        if (!todo.text || /^\s*$/.test(todo.text))  {
             return;
         }
 
