@@ -30,6 +30,12 @@ function Todo({todos, completeTodo, removeTodo, updateTodo }) {
         }
 
     }
+    const completeTodoEnter = (e,o) => {
+        if(e.key === 'Enter'){
+            completeTodo(o)
+        }
+
+    }
       
     if(edit.id) {
         return <TodoSkjema edit={edit} tabIndex="0" onSubmit={submitUpdate} />;
@@ -40,14 +46,14 @@ function Todo({todos, completeTodo, removeTodo, updateTodo }) {
 
         
      <div className={todo.isComplete ? 'todo-row complete': 
-    'todo-row'} tabIndex="0" key={index}>
+    'todo-row'} key={index}>
 
-   <div 
-   onKeyUp={todo.id} 
-   onClick={() => completeTodo(todo.id)}
+   <button className="knapp"
+    onClick={() => completeTodo(todo.id)}
+    onKeyUp={(e) => completeTodoEnter(e, todo.id)}
    >
       {todo.text}
-      </div>
+      </button>   
 
       {/*react-icons, ikonene "exit" og "rewrite" i appen*/
       /*Man må huske å importere fra react-icons. 
